@@ -1,11 +1,11 @@
 <h1 align="center">Data Struture Class 2022.2</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/vxfontes/code?color=56BEB8">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/vxfontes/dataStructureClass?color=56BEB8">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/vxfontes/code?color=56BEB8">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/vxfontes/dataStructureClass?color=56BEB8">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/vxfontes/code?color=56BEB8">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/vxfontes/dataStructureClass?color=56BEB8">
 </p>
 
 <h4 align="center"> 
