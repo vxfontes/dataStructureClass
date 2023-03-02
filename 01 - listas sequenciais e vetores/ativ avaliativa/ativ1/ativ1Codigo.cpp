@@ -49,6 +49,30 @@ int main() {
 
     visualizar(dadosResultanteUniao, quantidade1+quantidade2);
 
+    cout << endl << "Agora iremos remover as informacoes da lista 1" << endl;
+
+    cout << "Informe o indice do valor que deseja remover, se nao deseja remover, informe um valor negativo" << endl;
+    cin >> value;
+
+    if(value < 0) {
+        removerPeloIndex(dados1, quantidade1, value);
+        cout << "Removido com sucesso" << endl;
+    } else {
+        cout << "Indice negativo identificado!" << endl;
+    }
+
+    cout << endl << "Agora iremos remover as informacoes da lista 2" << endl;
+
+    cout << "Informe o indice do valor que deseja remover, se nao deseja remover, informe um valor negativo" << endl;
+    cin >> value;
+
+    if(value < 0) {
+        removerPeloIndex(dados2, quantidade2, value);
+        cout << "Removido com sucesso" << endl;
+    } else {
+        cout << "Indice negativo identificado!" << endl;
+    }
+
     return 0;
 }
 
@@ -129,4 +153,14 @@ void uniao(int quantidade1, int quantidade2, float data1[], float data2[], float
         dataResultante[i] = data2[j];
         i++;
     }
+}
+
+void removerPeloIndex(float data[], int &quant, int indice) {
+    int i;
+
+    for(i = indice; i < quant, i++) {
+        data[i] = data[i++];
+    }
+
+    quant--;
 }
