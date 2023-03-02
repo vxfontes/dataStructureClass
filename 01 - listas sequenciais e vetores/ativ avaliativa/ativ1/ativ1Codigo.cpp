@@ -9,6 +9,7 @@ void visualizar(float data[], int quant);
 void intercalar(int quantidade1, int quantidade2, float data1[], float data2[], float dataResultante[]);
 void interseccao(int quantidade1, int quantidade2, float data1[], float data2[], float dataResultante[], int &quantidadeResultado);
 void uniao(int quantidade1, int quantidade2, float data1[], float data2[], float dataResultante[]);
+void removerPeloIndex(float data[], int &quant, int indice);
 
 int main() {
     int numMax = 7, quantidade1, quantidade2, value, quantidadeResultado;
