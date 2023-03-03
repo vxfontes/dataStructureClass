@@ -81,13 +81,29 @@ void buscar(float lista[], int quantidade, float valor) {
 
 void bubbleSort(float lista[], int quantidade) {
     bool trocouOLugar;
-    int var, i;
+    float var;
+    int i;
+    int fim = quantidade - 1; //variavel que conta os elementos
 
+    // inversoes que verificam se o elemento da direita eh menor ou maior
     do {
         trocouOLugar = false;
 
-        for(i = 0; i < quantidade < i++) {
-            
+        // invertendo entre dois elementos
+        // utilizaçao do fim
+        for(i = 0; i < fim; i++) {
+            if (lista[i] > lista[i + 1]) {
+                //se o proximo elemento for maior que o atual
+                var = lista[i];
+                lista[i] = lista[i+ 1];
+                lista[i + 1] = var;
+                trocouOLugar = true;
+            }
         }
+
+        // versao otimizada
+        // a primeira rodada do loop garante que o maior elemento esteja na ultima posição
+        // então decrementamos um na variavel fim, diminuindo cada vez o loop e 'eliminando' a verificação dos ultimos e maiores elementos
+        fim--;
     } while (trocouOLugar);
 }
