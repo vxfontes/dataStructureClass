@@ -26,7 +26,7 @@ int main() {
         } else if (expressao[i] == ')') {
             int valor; // descobrindo qual valor esta no topo da pilha
             int getValue = desempilhar(pilha, topo, valor); // descartando valor da pilha (fechando parenteses)
-            if (getValue == 10) {
+            if (getValue) {
                 balanceada = false;
                 break;
             }
