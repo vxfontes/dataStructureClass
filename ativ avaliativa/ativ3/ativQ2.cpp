@@ -13,38 +13,44 @@ using namespace std;
 
 void enfileirar(string fila[], int &finalFila, string valor);
 int desenfileirar(string fila[], int &inicioFila, int finalFila, string &valor);
-void empilhar(string pilha[], int &topo, string valor);
+void empilhar(string pilha[], int &topo, char valor);
 void empilharProcessamento(string pilha[], int &topo, string texto);
 int desempilhar(string pilha[], int &topo, string &valor);
 
 int main(void) {
 
     // Declarando uma fila
-    string fila[MAX], pilha[MAX];
-    int inicioFila = 0, topo = -1;
-    int finalFila = -1;
-    string caracteres;
-
+    string fila[MAX], pilha[MAX], caracteres;
+    int inicioFila = 0, topo = -1, finalFila = -1;
     int i, valor, numero;
+    string value;
 
     cout << "Digite uma sequencia de caracteres: ";
     getline(cin, caracteres);
 
     enfileirar(fila, finalFila, caracteres);
-    empilharProcessamento(fila, inicioFila, finalFila, caracteres);
+    while(desenfileirar(fila, inicioFila, finalFila, caracteres) == 0) {
+        cout << "desenfileirando: " << caracteres << endl;
+    }
+    empilharProcessamento(pilha, topo, caracteres);
+
+    do {
+        valor = desempilhar(pilha, topo, value);
+        if (valor == 0) cout << value;
+    } while (valor == 0);
 
     return 0;
 }
 
 
 void enfileirar(string fila[], int &finalFila, string valor) {
-    if(finalFila < MAX - 1) { // verificando se a fila esta cheia
-        // a posicao que vamos inserir sera a final
-        finalFila++;  // como começa do -1, ja iniciaremos incrementando
-        fila[finalFila] = valor;
-        cout << valor;
-    } else {
-        cout << "A lista esta cheia" << endl;
+    for (int i = 0; i < valor.length(); i++) {
+        if(finalFila < MAX - 1) { 
+            finalFila++;  
+            fila[finalFila] = valor[i];
+        } else {
+            cout << "A lista esta cheia" << endl;
+        }
     }
 }
 
@@ -57,7 +63,7 @@ int desenfileirar(string fila[], int &inicioFila, int finalFila, string &valor) 
     return 1;
 }
 
-void empilhar(string pilha[], int &topo, string valor) {
+void empilhar(string pilha[], int &topo, char valor) {
     if (topo<MAX-1) {
         topo = topo + 1;
         pilha[topo] = valor;
@@ -78,5 +84,9 @@ void empilharProcessamento(string pilha[], int &topo, string texto) {
         if (texto[i] >= 'A' && texto[i] <= 'Z') {
             texto[i] = texto[i] + 32;
         }
+
+        char getValue = texto[i];
+
+        empilhar(pilha, topo, getValue);
     }
 }
