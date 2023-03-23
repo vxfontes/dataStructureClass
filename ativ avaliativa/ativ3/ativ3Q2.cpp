@@ -81,6 +81,7 @@ int desempilhar(string pilha[], int &topo, string &valor) {
     return 0;
 }
 
+// for para individualizar letra
 void empilharProcessamento(string pilha[], int &topo, string texto) {
     for (int i = 0; i < texto.length(); i++) {
         if (texto[i] >= 'A' && texto[i] <= 'Z') {
