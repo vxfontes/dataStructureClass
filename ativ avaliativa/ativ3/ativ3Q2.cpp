@@ -30,9 +30,10 @@ int main(void) {
 
     enfileirar(fila, finalFila, caracteres);
     while(desenfileirar(fila, inicioFila, finalFila, caracteres) == 0) {
+        empilharProcessamento(pilha, topo, caracteres); // movido para dentro do while
         cout << "desenfileirando: " << caracteres << endl;
+        caracteres = ""; // resetar a variável caracteres a cada iteração
     }
-    empilharProcessamento(pilha, topo, caracteres);
 
     do {
         valor = desempilhar(pilha, topo, value);
@@ -41,6 +42,7 @@ int main(void) {
 
     return 0;
 }
+
 
 
 void enfileirar(string fila[], int &finalFila, string valor) {
