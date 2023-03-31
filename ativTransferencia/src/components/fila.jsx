@@ -33,7 +33,7 @@ export function Fila() {
                     <label style={{
                         color: '#979797ae',
                         marginLeft: -100
-                    }}>Insira elemento a ser empilhado</label>
+                    }}>Insira elemento a ser enfileirado</label>
                     <input type="text" onChange={(e) => setValue(e.target.value)} style={inputPrincipalFila} />
                 </div>
             </div>

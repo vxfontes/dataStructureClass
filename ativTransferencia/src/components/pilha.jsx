@@ -32,7 +32,7 @@ export function Pilha() {
                     <label style={{
                         color: '#e0ccfcb7',
                         marginLeft: -100
-                    }}>Insira elemento a ser enfileirado</label>
+                    }}>Insira elemento a ser empilhado</label>
                     <input type="text" onChange={(e) => setValue(e.target.value)} style={inputPrincipal} />
                 </div>
             </div>

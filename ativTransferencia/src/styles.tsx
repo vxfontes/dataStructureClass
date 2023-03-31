@@ -90,14 +90,16 @@ export const containerGeral = {
     textAlign: 'center',
     paddingTop: 100,
     minHeight: '100vh',
+    maxHeight: '100%',
     backgroundColor: '#1d2b3a',
 }
 
 export const containerGeralFila = {
     display: 'block',
     textAlign: 'center',
-    marginTop: 100,
-    minHeight: '86vh',
+    minHeight: '88vh',
+    paddingTop: 100,
+    maxHeight: '100%',
     backgroundColor: '#fff'
 }
 
