@@ -26,13 +26,13 @@ This website has all the points that will be dealt with over the semester
 
 
 <h4>Assuntos da prova</h4>
-- Listas (ordenada e não ordenada)
-- Pilhas
-- Filas (simples e circular)
-- Algoritmos de ordenação
-  - SelectionSort
-  - InsertionSort
-  - BubbleSort
-  - MergeSort
-  - QuickSort
+- Listas (ordenada e não ordenada)<br />
+- Pilhas<br />
+- Filas (simples e circular)<br />
+- Algoritmos de ordenação<br />
+  - SelectionSort<br />
+  - InsertionSort<br />
+  - BubbleSort<br />
+  - MergeSort<br />
+  - QuickSort<br />
 - Análise de complexidade de algoritmos
